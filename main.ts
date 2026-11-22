@@ -32,9 +32,6 @@ const DOSSIER_CAPS = {
 };
 
 function handIn() {
-  // Start from a clean output folder so a stale file can never leak into
-  // the entry: a previous run's screenshot must not survive a rebuild.
-  rmSync(outputDir, { recursive: true, force: true });
   mkdirSync(outputDir, { recursive: true });
 
   // The game itself, plain static files, copied whole.
